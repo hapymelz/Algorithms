@@ -8,10 +8,13 @@
 import SwiftUI
 
 @main
-struct AlgorithmsApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
+struct AlgorithmsApp: App
+{
+    var body: some Scene
+    {
+        WindowGroup
+        {
+            IntroView()
         }
     }
 }

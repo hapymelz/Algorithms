@@ -13,8 +13,8 @@ struct IntroView: View
     {
         VStack
         {
-            Image("Placeholer")
-            Text("Hello World!")
+            Image("CodeExample@2x")
+            Text("Introduction to Algorithms in CSP")
             NavigationLink("Placeholder Link", destination: AlgorithmView())
         }
             

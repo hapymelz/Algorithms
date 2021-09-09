@@ -11,13 +11,17 @@ struct IntroView: View
 {
     var body: some View
     {
-        VStack
+        NavigationView
         {
-            Image("CodeExample@2x")
-            Text("Introduction to Algorithms in CSP")
-            NavigationLink("Placeholder Link", destination: AlgorithmView())
+            VStack
+            {
+                Image("Algorithm")
+                    .resizable()
+                    .scaledToFit()
+                Text("Introduction to Algorithms in CSP")
+                NavigationLink("Placeholder Link", destination: AlgorithmView())
+            }
         }
-            
     }
 }
 

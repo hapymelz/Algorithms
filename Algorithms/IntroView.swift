@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  IntroView.swift
 //  Algorithms
 //
 //  Created by Numbers, Katherine on 9/7/21.
@@ -11,8 +11,12 @@ struct IntroView: View
 {
     var body: some View
     {
-        Text("Hello, world!")
-            .padding()
+        VStack
+        {
+            Image("Placeholer")
+            Text("Hello World!")
+            NavigationLink("Placeholder Link", destination: AlgorithmView())
+        }
             
     }
 }

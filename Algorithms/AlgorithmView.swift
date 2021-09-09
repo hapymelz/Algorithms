@@ -7,17 +7,24 @@
 
 import SwiftUI
 
+let algorithmTitle : String = "Paste text to a screen in XCode"
+
 struct AlgorithmView: View
 {
     var body: some View
     {
         VStack
         {
-            Text("Hello")
+            Text(algorithmTitle)
+                .bold()
             Image("CodeExample")
                 .resizable()
                 .scaledToFit()
-            Text("Hello")
+            Text(setupAlgorithm())
+                .foregroundColor(.yellow)
+                .rotation3DEffect(
+                    Angle(degrees: 45),
+                    axis: (x: 1.0, y: 0.0, z: 0.0))
         }
     }
 }
@@ -34,7 +41,7 @@ struct AlgorithmView_Previews: PreviewProvider
 }
 private func setupAlgorithm() -> String
 {
-    let algorithmTitle : String = "Paste text to a screen in XCode"
+ 
     
     let stepOne : String =  "Create an app, and delete the following portion: 'Text(Hello World)'"
     let stepTwo : String = "Underneath “var body: some View { “, type “Vstack { “, it should be indented because it is in the function."

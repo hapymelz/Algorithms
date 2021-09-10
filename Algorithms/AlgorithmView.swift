@@ -16,16 +16,22 @@ struct AlgorithmView: View
         VStack
         {
             Text(algorithmTitle)
+                .font(.title3)
                 .bold()
+                
             Image("CodeExample")
                 .resizable()
+                
                 .scaledToFit()
             Text(setupAlgorithm())
                 .foregroundColor(.yellow)
+                
                 .rotation3DEffect(
                     Angle(degrees: 45),
                     axis: (x: 1.0, y: 0.0, z: 0.0))
+                
         }
+        .padding(.bottom, 165.832)
     }
 }
 
@@ -48,16 +54,16 @@ private func setupAlgorithm() -> String
     let stepThree : String = "Underneath “VStack { “, return indented, type “text(“Your text here_”)"
     let stepFour : String = "You can change the text it outputs as long as the text is between the parentheses and within the quotation marks."
     
-    var algorithm = [algorithmTitle, stepOne, stepTwo, stepThree, stepFour]
+    let algorithm = [stepOne, stepTwo, stepThree, stepFour]
     
-    let algorithmDescription = algorithmTitle
+    var algorithmDescription = algorithmTitle
     
     for step in algorithm
     {
         let bullet : String = "🎮"
         let bulletStep : String = "\n\(bullet) \(step)"
         
-        algorithm.append(bulletStep)
+        algorithmDescription.append(bulletStep)
     }
     
     return algorithmDescription

@@ -53,24 +53,26 @@ struct AlgorithmView_Previews: PreviewProvider
 
 private func setupAlgorithm() -> String
 {
- 
+    var result : String = " "
     
     let stepOne : String =  "Delete the following portion: 'Text(Hello World)'"
     let stepTwo : String = "Underneath “var body: some View { “, type “Vstack { “"
     let stepThree : String = "Underneath “VStack { “, type “text(“Your text here_”)"
     let stepFour : String = "You can change the text in between (“_“) "
     
+    let title = "Paste text to a screen in XCode\n"
+    
     let algorithm = [stepOne, stepTwo, stepThree, stepFour]
     
-    var algorithmDescription : String = "Paste text to a screen in XCode"
+    result += title
     
     for step in algorithm
     {
         let bullet : String = "🎮"
         let bulletStep : String = "\n\(bullet) \(step)"
         
-        algorithmDescription.append(bulletStep)
+        result.append(bulletStep)
     }
     
-    return algorithmDescription
+    return result
 }

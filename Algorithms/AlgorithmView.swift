@@ -7,10 +7,12 @@
 
 import SwiftUI
 
-let algorithmTitle : String = "Paste text to a screen in XCode"
+
 
 struct AlgorithmView: View
 {
+    private let algorithmTitle : String = "Code Algorithm 🎮"
+    
     var body: some View
     {
         VStack
@@ -26,12 +28,14 @@ struct AlgorithmView: View
             Text(setupAlgorithm())
                 .foregroundColor(.yellow)
                 
+                .padding(.horizontal, 40.0)
                 .rotation3DEffect(
                     Angle(degrees: 45),
                     axis: (x: 1.0, y: 0.0, z: 0.0))
                 
         }
         .padding(.bottom, 165.832)
+        
     }
 }
 
@@ -45,18 +49,20 @@ struct AlgorithmView_Previews: PreviewProvider
         AlgorithmView()
     }
 }
+
+
 private func setupAlgorithm() -> String
 {
  
     
-    let stepOne : String =  "Create an app, and delete the following portion: 'Text(Hello World)'"
-    let stepTwo : String = "Underneath “var body: some View { “, type “Vstack { “, it should be indented because it is in the function."
-    let stepThree : String = "Underneath “VStack { “, return indented, type “text(“Your text here_”)"
-    let stepFour : String = "You can change the text it outputs as long as the text is between the parentheses and within the quotation marks."
+    let stepOne : String =  "Delete the following portion: 'Text(Hello World)'"
+    let stepTwo : String = "Underneath “var body: some View { “, type “Vstack { “"
+    let stepThree : String = "Underneath “VStack { “, type “text(“Your text here_”)"
+    let stepFour : String = "You can change the text in between (“_“) "
     
     let algorithm = [stepOne, stepTwo, stepThree, stepFour]
     
-    var algorithmDescription = algorithmTitle
+    var algorithmDescription : String = "Paste text to a screen in XCode"
     
     for step in algorithm
     {

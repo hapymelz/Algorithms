@@ -19,7 +19,7 @@ struct IntroView: View
                     .resizable()
                     .scaledToFit()
                 Text("Introduction to Algorithms in CSP")
-                NavigationLink("Placeholder Link", destination: AlgorithmView())
+                NavigationLink("My Algorithm!", destination: AlgorithmView())
             }
         }
     }

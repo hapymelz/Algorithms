@@ -13,13 +13,20 @@ struct IntroView: View
     {
         NavigationView
         {
-            VStack
+            ZStack
             {
-                Image("Algorithm")
-                    .resizable()
-                    .scaledToFit()
-                Text("Introduction to Algorithms in CSP")
-                NavigationLink("My Algorithm!", destination: AlgorithmView())
+                Color.black.edgesIgnoringSafeArea(.all)
+                
+                VStack
+                {
+                    Image("Algorithm")
+                        .resizable()
+                        .scaledToFit()
+                    Text("Introduction to Algorithms in CSP")
+                        .foregroundColor(.white)
+                    NavigationLink("My Algorithm!", destination: AlgorithmView())
+                }
+                .padding(.bottom, 200.0)
             }
         }
     }

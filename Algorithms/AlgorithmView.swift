@@ -15,27 +15,30 @@ struct AlgorithmView: View
     
     var body: some View
     {
-        VStack
+        ZStack
         {
-            Text(algorithmTitle)
-                .font(.title3)
-                .bold()
-                
-            Image("CodeExample")
-                .resizable()
-                
-                .scaledToFit()
-            Text(setupAlgorithm())
-                .foregroundColor(.yellow)
-                
-                .padding(.horizontal, 40.0)
-                .rotation3DEffect(
-                    Angle(degrees: 45),
-                    axis: (x: 1.0, y: 0.0, z: 0.0))
-                
-        }
-        .padding(.bottom, 165.832)
+            Color.black.edgesIgnoringSafeArea(.all)
         
+            VStack
+            {
+                Text(algorithmTitle)
+                    .font(.title3)
+                    .bold()
+                    .foregroundColor(.red)
+                    
+                Image("CodeExample")
+                    .resizable()
+                    .padding(.bottom, -37.0)
+                    .scaledToFit()
+                Text(setupAlgorithm())
+                    .foregroundColor(.yellow)
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal, 38.0)
+                    .rotation3DEffect(Angle(degrees: 45), axis: (x: 1.0, y: 0.0, z: 0.0))
+                    
+            }
+            .padding(.bottom, 136.832)
+        }
     }
 }
 
@@ -69,7 +72,7 @@ private func setupAlgorithm() -> String
     for step in algorithm
     {
         let bullet : String = "🎮"
-        let bulletStep : String = "\n\(bullet) \(step)"
+        let bulletStep : String = "\n\(bullet) \(step)\n"
         
         result.append(bulletStep)
     }
